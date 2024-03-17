@@ -26,10 +26,10 @@ def create_directories(path_to_directories: list, verbose=True):
     for path in path_to_directories:
         os.makedirs(path, exist_ok=True)
         if verbose:
-            logger.info(f"createed directory: {path}")
+            logger.info(f"created directory: {path}")
 
 @ensure_annotations
-def get_Size(path: Path) -> str:
+def get_size(path: Path) -> str:
 
     size_in_kb = round(os.path.getsize(path)/1024)
     return f"~ {size_in_kb} KB"
